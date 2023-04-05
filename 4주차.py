@@ -10,3 +10,4 @@ def solution(arr):
     return answer
   
   
+#answer[-1] 쓰면 편헀다. 배열크기0에도 -1인덱스 사용가능
