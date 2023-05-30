@@ -1,4 +1,5 @@
-# https://school.programmers.co.kr/learn/courses/30/lessons/77884 약수의 개수와 덧셈
+# https://school.programmers.co.kr/learn/courses/30/lessons/77884
+#약수의 개수와 덧셈
 # 이중 반복문을 이용
 def solution(left, right):
     answer = 0
@@ -14,14 +15,16 @@ def solution(left, right):
         cnt=0    
     return answer
   
-# https://school.programmers.co.kr/learn/courses/30/lessons/70128 내적
+# https://school.programmers.co.kr/learn/courses/30/lessons/70128
+#내적
 def solution(a, b):
     answer = 0
     for i in range(len(a)):
         answer += a[i]*b[i]
     return answer
   
-#https://school.programmers.co.kr/learn/courses/30/lessons/120902   문자열 계산하기
+#https://school.programmers.co.kr/learn/courses/30/lessons/120902 
+#문자열 계산하기
 def solution(my_string):
     return eval(my_string)
   
