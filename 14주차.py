@@ -52,3 +52,63 @@ def solution(answers):
         elif answer[i] == max:
             ans.append(i+1)
     return ans
+#너무 조잡하게 풀었다
+#다른 풀이는 깔끔하더라
+#enumerate, cycle 이라는 함수 공부하기
+https://school.programmers.co.kr/learn/courses/30/lessons/42586?language=python3
+기능개발
+def solution(progresses, speeds):
+    answer = []
+    idx = 0
+    while True:
+        cnt = 0
+        for i in range(len(speeds)):
+            if progresses[i]<100:
+                progresses[i]+=speeds[i]
+        while progresses[idx]>=100:
+            cnt +=1
+            idx+=1
+            if idx>= len(speeds):
+                break
+        if cnt>0:
+            answer.append(cnt)
+        if idx>= len(speeds):
+                break
+    return answer
+#굳이 idx말고 pop(0)사용해도 될듯한데 왜 안됐을까
+#파이썬은 굳이 큐스택 안쓰고 리스트로 사용해도 좋군요
+#추가적으로 먼저 c#으로푼 풀이 구조는 똑같다
+public static int[] solution(int[] progresses, int[] speeds)
+    {
+        List<int> answer = new List<int>();
+        int idx = 0;
+        while (true)
+        {
+            int cnt = 0;
+            for (int i = 0; i < progresses.Length; i++)
+            {
+                if (progresses[i] < 100)
+                {
+                    progresses[i] += speeds[i];
+                }
+            }
+            while (progresses[idx] >= 100)
+            {
+                cnt++;
+                idx++;
+                if (idx >= progresses.Length)
+                {
+                    break;
+                }
+            }
+            if (cnt > 0)
+            {
+                answer.Add(cnt);
+            }
+            if (idx >= progresses.Length)
+            {
+                break;
+            }
+        }
+        return answer.ToArray();
+    }
